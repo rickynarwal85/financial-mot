@@ -742,6 +742,114 @@
     }
 
     /* =============================================
+       WHO IS THIS FOR
+    ============================================= */
+    .personas__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .persona__card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .persona__card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(13,37,69,0.09);
+    }
+
+    .persona__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--pale-blue), #dde8f8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .persona__icon i {
+      color: var(--teal);
+      font-size: 1.3rem;
+    }
+
+    .persona__card h3 {
+      font-size: 0.95rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .persona__card p {
+      font-size: 0.85rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       DATA SAFETY
+    ============================================= */
+    .data-safe__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .data-safe__item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .data-safe__icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .data-safe__icon i {
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    .data-safe__item h3 {
+      font-size: 0.97rem;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .data-safe__item p {
+      font-size: 0.88rem;
+      color: var(--slate);
+      line-height: 1.65;
+    }
+
+    .data-safe__note {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--slate);
+    }
+
+    /* =============================================
        CONTACT
     ============================================= */
     .contact__inner {
@@ -961,6 +1069,8 @@
       .nav__toggle { display: flex; }
 
       .how__grid { grid-template-columns: 1fr; }
+      .personas__grid { grid-template-columns: repeat(2, 1fr); }
+      .data-safe__grid { grid-template-columns: 1fr; }
 
 .footer__grid { grid-template-columns: 1fr; gap: 32px; }
 
@@ -975,6 +1085,7 @@
       .contact__buttons { flex-direction: column; align-items: stretch; }
       .contact__buttons .btn { justify-content: center; }
       .pricing__card { padding: 32px 24px; }
+      .personas__grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1044,6 +1155,38 @@
         </div>
       </div>
     </div>
+
+    <!-- ============ WHO IS THIS FOR ============ -->
+    <section id="who-is-this-for" class="section section--alt">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h2>Who Is This For?</h2>
+          <p>You don't need to be in financial trouble to benefit from a Financial MOT. Most people just want clarity.</p>
+        </div>
+        <div class="personas__grid">
+          <div class="persona__card fade-in" style="transition-delay:0s">
+            <div class="persona__icon"><i class="fa-solid fa-circle-question"></i></div>
+            <h3>The "Where Does It All Go?" Person</h3>
+            <p>You earn a decent salary but somehow never have as much left over as you'd expect. A Financial MOT shows you exactly where it goes.</p>
+          </div>
+          <div class="persona__card fade-in" style="transition-delay:0.1s">
+            <div class="persona__icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Couples Managing Joint Finances</h3>
+            <p>When two people's spending habits combine, blind spots appear. A neutral, expert review helps you both see the full picture without the awkward conversation.</p>
+          </div>
+          <div class="persona__card fade-in" style="transition-delay:0.2s">
+            <div class="persona__icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>About to Make a Big Decision</h3>
+            <p>Buying a house, changing jobs, starting a family — before any major financial step, it helps to know exactly where you stand today.</p>
+          </div>
+          <div class="persona__card fade-in" style="transition-delay:0.3s">
+            <div class="persona__icon"><i class="fa-solid fa-piggy-bank"></i></div>
+            <h3>Wanting to Save More, Not Sure How</h3>
+            <p>You know you should be saving more but cutting back feels overwhelming. A Financial MOT shows you where the low-effort wins actually are.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ============ HOW IT WORKS ============ -->
     <section id="how-it-works" class="section">
@@ -1242,6 +1385,47 @@
       </div>
     </section>
 
+    <!-- ============ DATA SAFETY ============ -->
+    <section id="data-safety" class="section">
+      <div class="container">
+        <div class="section__header fade-in">
+          <h2>Your Data is Safe</h2>
+          <p>Sharing your bank statements takes trust. Here's exactly how your information is handled.</p>
+        </div>
+        <div class="data-safe__grid">
+          <div class="data-safe__item fade-in" style="transition-delay:0s">
+            <div class="data-safe__icon"><i class="fa-solid fa-lock"></i></div>
+            <div>
+              <h3>Encrypted Transfer</h3>
+              <p>Statements are sent via WhatsApp or email — both of which use end-to-end or transport encryption. You choose whichever you're most comfortable with.</p>
+            </div>
+          </div>
+          <div class="data-safe__item fade-in" style="transition-delay:0.1s">
+            <div class="data-safe__icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div>
+              <h3>No Third-Party Sharing</h3>
+              <p>Your statements and financial information are never shared with any third party — not partners, not advertisers, not anyone. Ever.</p>
+            </div>
+          </div>
+          <div class="data-safe__item fade-in" style="transition-delay:0.2s">
+            <div class="data-safe__icon"><i class="fa-solid fa-trash-can"></i></div>
+            <div>
+              <h3>Permanently Deleted Within 14 Days</h3>
+              <p>Once your review is delivered, all copies of your statements are permanently deleted within 14 days. Nothing is retained beyond what's needed to produce your summary.</p>
+            </div>
+          </div>
+          <div class="data-safe__item fade-in" style="transition-delay:0.3s">
+            <div class="data-safe__icon"><i class="fa-solid fa-eye-slash"></i></div>
+            <div>
+              <h3>Confidential Review Process</h3>
+              <p>Your review is produced solely by Ricky and seen by no one else. It's a private, one-to-one service — your finances are nobody else's business.</p>
+            </div>
+          </div>
+        </div>
+        <p class="data-safe__note fade-in">Full details on data handling are in our <a href="terms.html" style="color:var(--teal);text-decoration:underline;">Terms of Service</a>.</p>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="section section--alt">
       <div class="container">
@@ -1295,6 +1479,7 @@
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
         <div>
@@ -1316,6 +1501,8 @@
       <span>© 2025 Financial MOT. All rights reserved.</span>
       <span class="sep">|</span>
       <span>Not regulated by the FCA.</span>
+      <span class="sep">|</span>
+      <a href="terms.html" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Terms of Service</a>
     </div>
   </footer>
 
