@@ -742,63 +742,6 @@
     }
 
     /* =============================================
-       TESTIMONIALS
-    ============================================= */
-    .testimonials__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .testimonial__card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--teal);
-      border-radius: var(--radius);
-      padding: 32px 28px;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .testimonial__card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 32px rgba(13,37,69,0.08);
-    }
-
-    .testimonial__stars {
-      color: var(--gold);
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
-    }
-
-    .testimonial__quote {
-      font-style: italic;
-      color: var(--charcoal);
-      font-size: 0.97rem;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-
-    .testimonial__author {
-      font-weight: 600;
-      color: var(--navy);
-      font-size: 0.88rem;
-    }
-
-    .testimonial__location {
-      color: var(--slate);
-      font-size: 0.82rem;
-    }
-
-    .testimonials__note {
-      text-align: center;
-      margin-top: 32px;
-      font-size: 0.85rem;
-      color: var(--slate);
-      font-style: italic;
-    }
-
-    /* =============================================
        CONTACT
     ============================================= */
     .contact__inner {
@@ -1019,9 +962,7 @@
 
       .how__grid { grid-template-columns: 1fr; }
 
-      .testimonials__grid { grid-template-columns: 1fr; }
-
-      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+.footer__grid { grid-template-columns: 1fr; gap: 32px; }
 
       .trust-bar__divider { display: none; }
 
@@ -1298,38 +1239,6 @@
           </div>
 
         </div>
-      </div>
-    </section>
-
-    <!-- ============ TESTIMONIALS ============ -->
-    <section id="testimonials" class="section">
-      <div class="container">
-        <div class="section__header fade-in">
-          <h2>What Clients Say</h2>
-          <p>Honest feedback from people who've had their finances reviewed.</p>
-        </div>
-        <!-- TESTIMONIALS: replace placeholder cards below with real testimonials when available -->
-        <div class="testimonials__grid">
-          <div class="testimonial__card fade-in" style="transition-delay:0s">
-            <div class="testimonial__stars">★★★★★</div>
-            <p class="testimonial__quote">"A genuinely eye-opening experience. I had no idea how much I was spending on forgotten subscriptions — Ricky found things I hadn't noticed in years."</p>
-            <div class="testimonial__author">Sarah M.</div>
-            <div class="testimonial__location">London</div>
-          </div>
-          <div class="testimonial__card fade-in" style="transition-delay:0.15s">
-            <div class="testimonial__stars">★★★★★</div>
-            <p class="testimonial__quote">"Straightforward, honest, and worth every penny. The written summary was clear and gave me an actual action plan — something my bank has never done."</p>
-            <div class="testimonial__author">James T.</div>
-            <div class="testimonial__location">Manchester</div>
-          </div>
-          <div class="testimonial__card fade-in" style="transition-delay:0.3s">
-            <div class="testimonial__stars">★★★★★</div>
-            <p class="testimonial__quote">"I was sceptical at first but the review paid for itself almost immediately. Ricky spotted a direct debit I'd completely forgotten about. Brilliant service."</p>
-            <div class="testimonial__author">Claire B.</div>
-            <div class="testimonial__location">Bristol</div>
-          </div>
-        </div>
-        <p class="testimonials__note">Reviews reflect genuine client experiences. Replace these placeholders with your own testimonials when available.</p>
       </div>
     </section>
 
