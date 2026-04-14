@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Financial MOT — a personal finance review service by Ricky. Get a clear picture of your spending, subscriptions, and habits from someone with 15+ years of investment industry experience.">
-  <title>Financial MOT | Personal Finance Review</title>
+  <meta name="description" content="Financial MOT — personal finance coaching by Ricky. Start with a one-off MOT review, then continue with ongoing coaching to build smarter spending habits. 15+ years of investment industry experience.">
+  <title>Financial MOT | Personal Finance Coaching</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💷</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -420,7 +420,7 @@
     ============================================= */
     .how__grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
 
@@ -584,7 +584,11 @@
        PRICING
     ============================================= */
     .pricing__wrapper {
-      max-width: 500px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -595,6 +599,21 @@
       padding: 44px 40px;
       text-align: center;
       box-shadow: 0 8px 40px rgba(13,37,69,0.1);
+    }
+
+    .pricing__card--secondary {
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(13,37,69,0.06);
+    }
+
+    .pricing__next-step {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+      display: block;
     }
 
     .pricing__name {
@@ -746,7 +765,7 @@
     ============================================= */
     .personas__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
@@ -1071,6 +1090,7 @@
       .how__grid { grid-template-columns: 1fr; }
       .personas__grid { grid-template-columns: repeat(2, 1fr); }
       .data-safe__grid { grid-template-columns: 1fr; }
+      .pricing__wrapper { grid-template-columns: 1fr; }
 
 .footer__grid { grid-template-columns: 1fr; gap: 32px; }
 
@@ -1085,6 +1105,7 @@
       .contact__buttons { flex-direction: column; align-items: stretch; }
       .contact__buttons .btn { justify-content: center; }
       .pricing__card { padding: 32px 24px; }
+      .pricing__number { font-size: 3.5rem !important; }
       .personas__grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -1114,14 +1135,14 @@
     <!-- ============ HERO ============ -->
     <section id="hero">
       <div class="hero__content">
-        <span class="hero__label fade-in">Personal Finance Review</span>
+        <span class="hero__label fade-in">Financial Coaching</span>
         <h1 class="hero__title fade-in" style="transition-delay:0.1s">
-          Your Finances<br>Deserve a Health Check
+          Spend Smarter.<br>Not Less.
         </h1>
         <p class="hero__subtitle fade-in" style="transition-delay:0.2s">
-          Like an MOT keeps your car roadworthy, a Financial MOT reviews your spending,
-          subscriptions, and habits — giving you a clear, honest picture of where
-          your money actually goes.
+          Most people don't need a stricter plan — they need a clearer picture.
+          Ricky helps you understand where your money actually goes, spot what isn't working,
+          and make smarter choices with what you already earn.
         </p>
         <div class="hero__ctas fade-in" style="transition-delay:0.3s">
           <a href="https://wa.me/44XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Financial%20MOT" class="btn btn--whatsapp" target="_blank" rel="noopener">
@@ -1183,7 +1204,17 @@
           <div class="persona__card fade-in" style="transition-delay:0.3s">
             <div class="persona__icon"><i class="fa-solid fa-piggy-bank"></i></div>
             <h3>Wanting to Save More, Not Sure How</h3>
-            <p>You know you should be saving more but cutting back feels overwhelming. A Financial MOT shows you where the low-effort wins actually are.</p>
+            <p>You know there's money to be saved somewhere — you just can't see where. A Financial MOT shows you where the low-effort wins actually are.</p>
+          </div>
+          <div class="persona__card fade-in" style="transition-delay:0.4s">
+            <div class="persona__icon"><i class="fa-solid fa-repeat"></i></div>
+            <h3>The Subscription Creeper</h3>
+            <p>You signed up for a free trial three years ago and it's been charging you £9.99/month ever since. Multiply that across every app, streaming service, and membership, and you might be surprised what you find.</p>
+          </div>
+          <div class="persona__card fade-in" style="transition-delay:0.5s">
+            <div class="persona__icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3>The Mindless Spender</h3>
+            <p>You're not reckless with money, but you don't really think about smaller purchases. A coffee here, a Deliveroo there. Individually they're nothing. Collectively, they're a second rent.</p>
           </div>
         </div>
       </div>
@@ -1194,7 +1225,7 @@
       <div class="container">
         <div class="section__header fade-in">
           <h2>How It Works</h2>
-          <p>A straightforward three-step process — no complicated forms, no lengthy meetings.</p>
+          <p>A straightforward process — no complicated forms, no lengthy meetings.</p>
         </div>
         <div class="how__grid">
           <div class="how__card fade-in" style="transition-delay:0s">
@@ -1215,6 +1246,12 @@
             <h3>Receive Your Summary</h3>
             <p>You'll receive a clear, written summary with practical, actionable suggestions. No jargon, no product pushing — just honest feedback.</p>
           </div>
+          <div class="how__card fade-in" style="transition-delay:0.45s">
+            <span class="how__step">04</span>
+            <div class="how__icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Keep the Momentum</h3>
+            <p>For clients who want ongoing support, Ricky offers regular coaching sessions to help you stay on track, work through new goals, and build on what your MOT uncovered.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1224,10 +1261,12 @@
       <div class="container">
         <div class="about__grid">
           <div class="about__text fade-in">
-            <h2>About the Service</h2>
-            <p>Financial MOT is a personal finance review service run by Ricky, with over 15 years of experience in the investment management industry.</p>
-            <p>This isn't financial advice. It's a fresh pair of expert eyes on your money — helping you see clearly what's coming in, what's going out, and where there might be room to improve.</p>
-            <p>Ricky works independently, takes no commissions, and recommends no products. The only outcome is a clear, honest review written specifically for you.</p>
+            <h2>Meet Your Financial Coach</h2>
+            <p>Ricky has spent over 15 years in the investment management industry — and in that time, one thing became clear: most people don't need a wealth manager. They just need someone to help them see their money clearly.</p>
+            <p>Budgets are like diets — most people can't sustain them. The question Ricky asks instead is: <em>is this the smartest way to get what you actually want?</em></p>
+            <p>Take takeaway coffees. £780 over three months sounds a lot — but swap to a £250 machine and £15/month in beans, and you break even in six weeks and save around £2,000 a year. Same great coffee, a fraction of the cost. That's not a budget cut. That's a better decision.</p>
+            <p>Only 8% of UK adults currently take any kind of financial guidance. Traditional advisers are geared towards wealthy clients with complex investment needs. Most people just need a clear, independent view of where their money is going — and that's exactly what this service provides.</p>
+            <p>Ricky is not a financial adviser. There are no products to sell, no commissions to earn, and nothing regulated — because Ricky doesn't sell anything or manage anyone's money. Just honest coaching from someone who knows the industry inside out.</p>
             <ul class="about__checklist">
               <li><i class="fa-solid fa-circle-check"></i> No conflicts of interest</li>
               <li><i class="fa-solid fa-circle-check"></i> No product sales or upselling</li>
@@ -1262,16 +1301,16 @@
       <div class="container">
         <div class="section__header fade-in">
           <h2>Simple, Transparent Pricing</h2>
-          <p>One clear price. No hidden fees. No ongoing charges.</p>
+          <p>Every client starts with a Financial MOT. Ongoing coaching is available for those who want to go further.</p>
         </div>
-        <div class="pricing__wrapper fade-in" style="transition-delay:0.1s">
-          <div class="pricing__card">
-            <div class="pricing__name">Financial MOT Review</div>
+        <div class="pricing__wrapper">
+          <div class="pricing__card fade-in" style="transition-delay:0.1s">
+            <div class="pricing__name">Financial MOT</div>
             <div class="pricing__amount">
               <span class="pricing__currency">£</span>
               <span class="pricing__number">99</span>
             </div>
-            <p class="pricing__period">one-off, per review</p>
+            <p class="pricing__period">one-off — where every client starts</p>
             <hr class="pricing__divider">
             <ul class="pricing__features">
               <li><i class="fa-solid fa-check"></i> Full review of 3 months of statements</li>
@@ -1283,6 +1322,28 @@
             </ul>
             <a href="https://wa.me/44XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Financial%20MOT" class="btn btn--whatsapp" target="_blank" rel="noopener">
               <i class="fa-brands fa-whatsapp"></i> Get Started on WhatsApp
+            </a>
+          </div>
+          <div class="pricing__card pricing__card--secondary fade-in" style="transition-delay:0.2s">
+            <span class="pricing__next-step">Want to go further?</span>
+            <div class="pricing__name">Ongoing Coaching</div>
+            <div class="pricing__amount">
+              <span class="pricing__number" style="font-size:2.8rem;">from £49</span>
+            </div>
+            <p class="pricing__period">per session — packages available</p>
+            <hr class="pricing__divider">
+            <ul class="pricing__features">
+              <li><i class="fa-solid fa-check"></i> Regular check-ins (monthly or quarterly)</li>
+              <li><i class="fa-solid fa-check"></i> Subscription and recurring charge audits</li>
+              <li><i class="fa-solid fa-check"></i> Debt strategy and repayment planning</li>
+              <li><i class="fa-solid fa-check"></i> Savings and emergency fund planning</li>
+              <li><i class="fa-solid fa-check"></i> Benefits and entitlements awareness</li>
+              <li><i class="fa-solid fa-check"></i> Tax efficiency education</li>
+              <li><i class="fa-solid fa-check"></i> Couples financial alignment</li>
+              <li><i class="fa-solid fa-check"></i> Ongoing accountability and support</li>
+            </ul>
+            <a href="mailto:hello@financialmot.co.uk" class="btn btn--email">
+              <i class="fa-solid fa-envelope"></i> Get in Touch
             </a>
           </div>
         </div>
@@ -1317,7 +1378,7 @@
             </button>
             <div class="faq__answer">
               <div class="faq__answer-inner">
-                Your statements are reviewed confidentially and used solely to produce your written summary. They are not shared with any third parties and are deleted once your review is complete. Your privacy is taken seriously.
+                Your statements are reviewed by Ricky alone and used solely to produce your written summary. They are not shared with any third parties, and Ricky deletes them once your review is complete.
               </div>
             </div>
           </div>
@@ -1382,6 +1443,54 @@
             </div>
           </div>
 
+          <div class="faq__item fade-in" style="transition-delay:0.35s">
+            <button class="faq__question" aria-expanded="false">
+              What's the difference between this and a financial adviser?
+              <i class="fa-solid fa-chevron-down faq__chevron"></i>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                A financial adviser is FCA-regulated and recommends specific financial products like pensions, ISAs, or investments. A financial coach helps you understand your money, build better habits, and make informed decisions — without recommending or selling any products. Many people benefit from coaching first and then seek regulated advice later if they need it.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in" style="transition-delay:0.4s">
+            <button class="faq__question" aria-expanded="false">
+              What is mindful spending?
+              <i class="fa-solid fa-chevron-down faq__chevron"></i>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Rather than giving you a rigid spending plan, Ricky helps you think differently about how you spend. The question isn't "how do I spend less?" — it's "is this the smartest way to get what I actually want?" It feels less like restriction and more like getting better value from the money you already earn.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in" style="transition-delay:0.45s">
+            <button class="faq__question" aria-expanded="false">
+              Do I need to be in financial trouble to use this service?
+              <i class="fa-solid fa-chevron-down faq__chevron"></i>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Not at all. Most clients earn a decent salary and aren't in debt — they just want to be smarter with their money. Whether you want to save more, understand your spending habits, or just get a clear picture of where you stand, this service is for you.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item fade-in" style="transition-delay:0.5s">
+            <button class="faq__question" aria-expanded="false">
+              What happens after the MOT?
+              <i class="fa-solid fa-chevron-down faq__chevron"></i>
+            </button>
+            <div class="faq__answer">
+              <div class="faq__answer-inner">
+                Many clients find the MOT gives them everything they need. Others want to keep going — regular check-ins, working through specific goals, or tackling new challenges as they come up. If that sounds useful, Ricky offers flexible coaching sessions to carry the work forward.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1423,7 +1532,7 @@
             </div>
           </div>
         </div>
-        <p class="data-safe__note fade-in">Full details on data handling are in our <a href="terms.html" style="color:var(--teal);text-decoration:underline;">Terms of Service</a>.</p>
+        <p class="data-safe__note fade-in">Full details on data handling are in the <a href="terms.html" style="color:var(--teal);text-decoration:underline;">Terms of Service</a>.</p>
       </div>
     </section>
 
@@ -1470,7 +1579,7 @@
       <div class="footer__grid">
         <div>
           <span class="footer__logo">Financial MOT</span>
-          <p class="footer__tagline">A personal finance review service helping you understand exactly where your money goes — and where it could go further.</p>
+          <p class="footer__tagline">Honest, independent financial coaching. Understand where your money goes — and make smarter choices with what you already have.</p>
         </div>
         <div>
           <div class="footer__heading">Quick Links</div>
