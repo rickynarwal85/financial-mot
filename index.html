@@ -216,6 +216,7 @@
       display: flex;
       list-style: none;
       gap: 32px;
+      margin-left: auto;
     }
 
     .nav__link {
@@ -587,23 +588,29 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
-      align-items: start;
       max-width: 900px;
       margin: 0 auto;
     }
 
     .pricing__card {
       background: var(--white);
-      border: 2px solid var(--navy);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--teal);
       border-radius: var(--radius);
       padding: 44px 40px;
       text-align: center;
-      box-shadow: 0 8px 40px rgba(13,37,69,0.1);
+      box-shadow: 0 8px 40px rgba(13,37,69,0.12);
+      display: flex;
+      flex-direction: column;
     }
 
     .pricing__card--secondary {
       border: 1px solid var(--border);
       box-shadow: 0 4px 20px rgba(13,37,69,0.06);
+    }
+
+    .pricing__card--secondary .pricing__number {
+      font-size: 2.8rem;
     }
 
     .pricing__next-step {
@@ -665,6 +672,7 @@
       flex-direction: column;
       gap: 13px;
       margin-bottom: 36px;
+      flex: 1;
     }
 
     .pricing__features li {
@@ -1115,8 +1123,7 @@
   <!-- ============ NAVBAR ============ -->
   <nav id="main-nav" aria-label="Main navigation">
     <div class="container nav__inner">
-      <a href="#hero" class="nav__logo">Financial MOT</a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+<button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__menu" id="nav-menu">
@@ -1305,6 +1312,7 @@
         </div>
         <div class="pricing__wrapper">
           <div class="pricing__card fade-in" style="transition-delay:0.1s">
+            <span class="pricing__next-step" style="visibility:hidden;" aria-hidden="true">placeholder</span>
             <div class="pricing__name">Financial MOT</div>
             <div class="pricing__amount">
               <span class="pricing__currency">£</span>
@@ -1328,7 +1336,7 @@
             <span class="pricing__next-step">Want to go further?</span>
             <div class="pricing__name">Ongoing Coaching</div>
             <div class="pricing__amount">
-              <span class="pricing__number" style="font-size:2.8rem;">from £49</span>
+              <span class="pricing__number">from £49</span>
             </div>
             <p class="pricing__period">per session — packages available</p>
             <hr class="pricing__divider">
